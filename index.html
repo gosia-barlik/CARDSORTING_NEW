@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="d3-context-menu.css" />
 </head>
 <body>
+  <button id="submit">zapisz</button>
         <div id="RenameNodeModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
           <h2 id="modalTitle">Rename Node</h2>
           <form id="RenameNodeForm">
@@ -61,7 +62,34 @@
         <script src="jquery.js"></script>
         <script src="fastclick.js"></script>
         <script src="foundation.min.js"></script>
+         <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
         <script>
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          var firebaseConfig = {
+            apiKey: "AIzaSyBnZtNieL1vCWKS-ueQqScq0apKM6z8fe4",
+            authDomain: "d3tree-c5771.firebaseapp.com",
+            projectId: "d3tree-c5771",
+            storageBucket: "d3tree-c5771.appspot.com",
+            messagingSenderId: "549107471455",
+            appId: "1:549107471455:web:40bf444a73361072ac77ea",
+            measurementId: "G-Z5TY2C82GM"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+          const db = firebase.firestore();
+          const settings={timestampsInSnapshots: true};
+          db.settings(settings)
+        </script>
+        <script>
+                var treeData = [];
                 // for the first initialization
                 $('document').ready(function(){
                     $(document).foundation();
@@ -80,7 +108,31 @@
                             create_node();
                             return false;
                     });
-                    var treeJSON = d3.json("tree.json", draw_tree);
+
+
+                    db.collection('professions').onSnapshot(res=> {
+                      res.docChanges().forEach(change => {
+                    
+                        const doc = {...change.doc.data(), id: change.doc.id};
+                    
+                        switch (change.type) {
+                          case 'added':
+                          treeData.push(doc);
+                            break;
+                          case 'modified':
+                            const index = treeData.findIndex(item => item.id == doc.id);
+                            treeData[index] = doc;
+                            break;
+                          case 'removed':
+                          treeData = treeData.filter(item => item.id !== doc.id);
+                            break;
+                          default:
+                            break;
+                        }
+                        
+                        var treeJSON = draw_tree(null, treeData[0])//TODO:: change from array 0 
+                      });
+                  });
                 });
         </script>
 </body>

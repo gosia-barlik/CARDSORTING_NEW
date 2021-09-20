@@ -60,6 +60,7 @@ function rename_node() {
 outer_update = null;
 
 function draw_tree(error, treeData) {
+    // console.log(treeData);
 
 // Calculate total nodes, max label length
 var totalNodes = 0;
@@ -658,3 +659,64 @@ update(root);
 centerNode(root);
 tree_root = root;
 }
+
+document.getElementById('submit').addEventListener('click', ()=>updateChartInDb(tree_root))
+
+function updateChartInDb(obj){
+    console.log(obj);
+
+  if(obj){
+  var objcopy = convertRoot(obj);
+  console.log(objcopy);
+
+  db.collection('professions').doc(obj.id).update(objcopy, { merge: true });
+  }
+  }
+
+          //Convert root to database data
+  function convertRoot(root1) {
+  if(root1){
+          const converted = (({ name, children }) => 
+          ({ name, children}))(root1);
+
+          removeKeys(converted, ['parent','x','x0','y','y0','depth','id']);
+
+          return converted;
+      }
+  }
+
+  function removeKeys(obj, keys){
+  var index;
+  for (var prop in obj) {
+      // important check that this is objects own property
+      // not from prototype prop inherited
+      if(obj.hasOwnProperty(prop)){
+          switch(typeof(obj[prop])){
+              case 'string':
+                  index = keys.indexOf(prop);
+                  if(index > -1){
+                      delete obj[prop];
+                  }
+                  break;
+              case 'object':
+                  if(parseInt(prop)>-1){
+                      for (var prop2 in obj[prop]) {
+                      index = keys.indexOf(prop2);
+                          if(index > -1){
+                              delete obj[prop][prop2];
+                          }else{
+                              removeKeys(obj[prop][prop2], keys);
+                          }
+                      }
+                  }
+                  index = keys.indexOf(prop);
+                  if(index > -1){
+                      delete obj[prop];
+                  }else{
+                      removeKeys(obj[prop], keys);
+                  }
+                  break;
+          }
+      }
+  }
+  }
