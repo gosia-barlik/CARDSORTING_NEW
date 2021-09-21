@@ -1,5 +1,6 @@
 .node {
     cursor: pointer;
+    left:150px !important;
   }
   
   .overlay{
@@ -8,11 +9,11 @@
    
   .node circle {
     fill: #fff;
-    stroke: steelblue;
+    stroke: rgb(229, 235, 149);
     stroke-width: 1.5px;
   }
-   
-  .node text {
+  
+  .node-text {
     font-size:10px; 
     font-family:sans-serif;
   }
