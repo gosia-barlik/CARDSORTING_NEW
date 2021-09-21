@@ -1,6 +1,7 @@
 .node {
     cursor: pointer;
     left:150px !important;
+    box-shadow: 1px 6px 28px -18px rgba(66, 68, 90, 1);
   }
   
   .overlay{
@@ -9,7 +10,7 @@
    
   .node circle {
     fill: #fff;
-    stroke: rgb(229, 235, 149);
+    stroke: rgb(228, 215, 142);
     stroke-width: 1.5px;
   }
   

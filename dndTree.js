@@ -33,8 +33,10 @@ function create_node() {
     }
     id = generateUUID();
     name = $("#CreateNodeName").val();
+    type= $("#CreateNodeType").val();
     new_node = {
       name: name,
+      type: type,
       id: id,
       depth: create_node_parent.depth + 1,
       children: [],
@@ -44,6 +46,7 @@ function create_node() {
     create_node_parent.children.push(new_node);
     create_node_modal_active = false;
     $("#CreateNodeName").val("");
+    $("#CreateNodeType").val("");
   }
   close_modal();
   outer_update(create_node_parent);
@@ -425,14 +428,14 @@ function draw_tree(error, treeData) {
     if (d.synthetic == true) {
       result = d._children || d.children ? "darkgray" : "lightgray";
     } else {
-      if (d.type == "USDA") {
+      if (d.type == "1") {
         result = d._children || d.children ? "orangered" : "orange";
-      } else if (d.type == "Produce") {
+      } else if (d.type == "2") {
         result = d._children || d.children ? "yellowgreen" : "yellow";
-      } else if (d.type == "RecipeIngredient") {
+      } else if (d.type == "3") {
         result = d._children || d.children ? "skyblue" : "royalblue";
       } else {
-        result = "lightsteelblue";
+        result = "rgb(251, 252, 170)";
       }
     }
     return result;
@@ -572,7 +575,8 @@ function draw_tree(error, treeData) {
     .attr('width', rectNode.width)
     .attr('height', rectNode.height)
     .attr('class', 'nodeCircle')
-    .style("fill", colorNode);
+    .style("fill", colorNode)
+    .attr('filter', 'url(#drop-shadow)');
 
 
     nodeEnter
@@ -720,6 +724,8 @@ function draw_tree(error, treeData) {
   root.y0 = 0;
 
   // Layout the tree initially and center on the root node.
+  defs = baseSvg.append('defs');
+  initDropShadow();
   update(root);
   centerNode(root);
   tree_root = root;
@@ -730,13 +736,14 @@ document
   .addEventListener("click", () => updateChartInDb(tree_root));
 
 function updateChartInDb(obj) {
-  console.log(obj);
-
+    console.log('original');
+    console.log(obj);
   if (obj) {
     var objcopy = convertRoot(obj);
+    console.log('copy');
     console.log(objcopy);
 
-    db.collection("professions").doc(obj.id).update(objcopy, { merge: true });
+    db.collection("professions").doc(obj.id).update(objcopy);
   }
 }
 
@@ -809,10 +816,48 @@ function updateChartInDb(obj) {
 }
 
 
+function initDropShadow() {
+    var filter = defs.append("filter")
+        .attr("id", "drop-shadow")
+        .attr("height", "130%")
+        .attr("color-interpolation-filters", "sRGB")
+    
+    filter.append("feOffset")
+    .attr("result", "offOut")
+    .attr("in", "SourceGraphic")
+    .attr("dx", 0)
+    .attr("dy", 0);
+
+    filter.append("feGaussianBlur")
+        .attr("stdDeviation", 2)
+        .attr("in", "SourceAlpha")
+        .attr("result", "blur")
+
+    filter.append("feOffset")
+        .attr("dx", 2)
+        .attr("dy", 2)
+        .attr("in", "blur")
+        .attr("result", "offsetBlur");
+
+    filter.append("feComposite")
+    .attr("in", 'offOut')
+    .attr("in2", 'shadow')
+    .attr("operator", "over");
+
+    filter.append("feBlend")
+    .attr("in2", 'blurOut')
+    .attr("mode", "normal");
+
+    filter.append("feComponentTransfer")
+    .append("feFuncA")
+    .attr("type", "linear")
+    .attr("slope", 0.4)
+}
+
 //Convert root to database data
 function convertRoot(root1) {
   if (root1) {
-    const converted = (({ name, children }) => ({ name, children }))(root1);
+    const converted = (({ name, type, children }) => ({ name, type, children }))(root1);
 
     removeKeys(converted, ["parent", "x", "x0", "y", "y0", "depth", "id"]);
 

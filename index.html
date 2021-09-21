@@ -41,6 +41,13 @@
               </div>
             </div>
             <div class="row">
+              <div class="large-12 columns">
+                <label>Node type
+                  <input type="text" class="inputName" id='CreateNodeType' placeholder="node type" />
+                </label>
+              </div>
+            </div>
+            <div class="row">
               <div class="large-8 columns">
                 &nbsp;
               </div>
@@ -110,758 +117,758 @@
                     });
 
     //                 db.collection('professions').add( {
-    //                   "name": "flare",
+    //                   "type":"1","name": "flare",
     // "children": [{
-    //     "name": "analytics",
+    //     "type":"1","name": "analytics",
     //     "children": [{
-    //         "name": "cluster",
+    //         "type":"1","name": "cluster",
     //         "children": [{
-    //             "name": "AgglomerativeCluster",
-    //             "size": 3938
+    //             "type":"1","name": "AgglomerativeCluster",
+    //             "size": 3938,
     //         }, {
-    //             "name": "CommunityStructure",
+    //             "type":"1","name": "CommunityStructure",
     //             "size": 3812
     //         }, {
-    //             "name": "HierarchicalCluster",
+    //             "type":"1","name": "HierarchicalCluster",
     //             "size": 6714
     //         }, {
-    //             "name": "MergeEdge",
+    //             "type":"1","name": "MergeEdge",
     //             "size": 743
     //         }]
     //     }, {
-    //         "name": "graph",
+    //         "type":"1","name": "graph",
     //         "children": [{
-    //             "name": "BetweennessCentrality",
+    //             "type":"1","name": "BetweennessCentrality",
     //             "size": 3534
     //         }, {
-    //             "name": "LinkDistance",
+    //             "type":"1","name": "LinkDistance",
     //             "size": 5731
     //         }, {
-    //             "name": "MaxFlowMinCut",
+    //             "type":"1","name": "MaxFlowMinCut",
     //             "size": 7840
     //         }, {
-    //             "name": "ShortestPaths",
+    //             "type":"1","name": "ShortestPaths",
     //             "size": 5914
     //         }, {
-    //             "name": "SpanningTree",
+    //             "type":"1","name": "SpanningTree",
     //             "size": 3416
     //         }]
     //     }, {
-    //         "name": "optimization",
+    //         "type":"1","name": "optimization",
     //         "children": [{
-    //             "name": "AspectRatioBanker",
+    //             "type":"1","name": "AspectRatioBanker",
     //             "size": 7074
     //         }]
     //     }]
     // }, {
-    //     "name": "animate",
+    //     "type":"1","name": "animate",
     //     "children": [{
-    //         "name": "Easing",
+    //         "type":"1","name": "Easing",
     //         "size": 17010
     //     }, {
-    //         "name": "FunctionSequence",
+    //         "type":"1","name": "FunctionSequence",
     //         "size": 5842
     //     }, {
-    //         "name": "interpolate",
+    //         "type":"1","name": "interpolate",
     //         "children": [{
-    //             "name": "ArrayInterpolator",
+    //             "type":"1","name": "ArrayInterpolator",
     //             "size": 1983
     //         }, {
-    //             "name": "ColorInterpolator",
+    //             "type":"1","name": "ColorInterpolator",
     //             "size": 2047
     //         }, {
-    //             "name": "DateInterpolator",
+    //             "type":"1","name": "DateInterpolator",
     //             "size": 1375
     //         }, {
-    //             "name": "Interpolator",
+    //             "type":"1","name": "Interpolator",
     //             "size": 8746
     //         }, {
-    //             "name": "MatrixInterpolator",
+    //             "type":"1","name": "MatrixInterpolator",
     //             "size": 2202
     //         }, {
-    //             "name": "NumberInterpolator",
+    //             "type":"1","name": "NumberInterpolator",
     //             "size": 1382
     //         }, {
-    //             "name": "ObjectInterpolator",
+    //             "type":"1","name": "ObjectInterpolator",
     //             "size": 1629
     //         }, {
-    //             "name": "PointInterpolator",
+    //             "type":"1","name": "PointInterpolator",
     //             "size": 1675
     //         }, {
-    //             "name": "RectangleInterpolator",
+    //             "type":"1","name": "RectangleInterpolator",
     //             "size": 2042
     //         }]
     //     }, {
-    //         "name": "ISchedulable",
+    //         "type":"1","name": "ISchedulable",
     //         "size": 1041
     //     }, {
-    //         "name": "Parallel",
+    //         "type":"1","name": "Parallel",
     //         "size": 5176
     //     }, {
-    //         "name": "Pause",
+    //         "type":"1","name": "Pause",
     //         "size": 449
     //     }, {
-    //         "name": "Scheduler",
+    //         "type":"1","name": "Scheduler",
     //         "size": 5593
     //     }, {
-    //         "name": "Sequence",
+    //         "type":"1","name": "Sequence",
     //         "size": 5534
     //     }, {
-    //         "name": "Transition",
+    //         "type":"1","name": "Transition",
     //         "size": 9201
     //     }, {
-    //         "name": "Transitioner",
+    //         "type":"1","name": "Transitioner",
     //         "size": 19975
     //     }, {
-    //         "name": "TransitionEvent",
+    //         "type":"1","name": "TransitionEvent",
     //         "size": 1116
     //     }, {
-    //         "name": "Tween",
+    //         "type":"1","name": "Tween",
     //         "size": 6006
     //     }]
     // }, {
-    //     "name": "data",
+    //     "type":"1","name": "data",
     //     "children": [{
-    //         "name": "converters",
+    //         "type":"1","name": "converters",
     //         "children": [{
-    //             "name": "Converters",
+    //             "type":"1","name": "Converters",
     //             "size": 721
     //         }, {
-    //             "name": "DelimitedTextConverter",
+    //             "type":"1","name": "DelimitedTextConverter",
     //             "size": 4294
     //         }, {
-    //             "name": "GraphMLConverter",
+    //             "type":"1","name": "GraphMLConverter",
     //             "size": 9800
     //         }, {
-    //             "name": "IDataConverter",
+    //             "type":"1","name": "IDataConverter",
     //             "size": 1314
     //         }, {
-    //             "name": "JSONConverter",
+    //             "type":"1","name": "JSONConverter",
     //             "size": 2220
     //         }]
     //     }, {
-    //         "name": "DataField",
+    //         "type":"1","name": "DataField",
     //         "size": 1759
     //     }, {
-    //         "name": "DataSchema",
+    //         "type":"1","name": "DataSchema",
     //         "size": 2165
     //     }, {
-    //         "name": "DataSet",
+    //         "type":"1","name": "DataSet",
     //         "size": 586
     //     }, {
-    //         "name": "DataSource",
+    //         "type":"1","name": "DataSource",
     //         "size": 3331
     //     }, {
-    //         "name": "DataTable",
+    //         "type":"1","name": "DataTable",
     //         "size": 772
     //     }, {
-    //         "name": "DataUtil",
+    //         "type":"1","name": "DataUtil",
     //         "size": 3322
     //     }]
     // }, {
-    //     "name": "display",
+    //     "type":"1","name": "display",
     //     "children": [{
-    //         "name": "DirtySprite",
+    //         "type":"1","name": "DirtySprite",
     //         "size": 8833
     //     }, {
-    //         "name": "LineSprite",
+    //         "type":"1","name": "LineSprite",
     //         "size": 1732
     //     }, {
-    //         "name": "RectSprite",
+    //         "type":"1","name": "RectSprite",
     //         "size": 3623
     //     }, {
-    //         "name": "TextSprite",
+    //         "type":"1","name": "TextSprite",
     //         "size": 10066
     //     }]
     // }, {
-    //     "name": "flex",
+    //     "type":"1","name": "flex",
     //     "children": [{
-    //         "name": "FlareVis",
+    //         "type":"1","name": "FlareVis",
     //         "size": 4116
     //     }]
     // }, {
-    //     "name": "physics",
+    //     "type":"1","name": "physics",
     //     "children": [{
-    //         "name": "DragForce",
+    //         "type":"1","name": "DragForce",
     //         "size": 1082
     //     }, {
-    //         "name": "GravityForce",
+    //         "type":"1","name": "GravityForce",
     //         "size": 1336
     //     }, {
-    //         "name": "IForce",
+    //         "type":"1","name": "IForce",
     //         "size": 319
     //     }, {
-    //         "name": "NBodyForce",
+    //         "type":"1","name": "NBodyForce",
     //         "size": 10498
     //     }, {
-    //         "name": "Particle",
+    //         "type":"1","name": "Particle",
     //         "size": 2822
     //     }, {
-    //         "name": "Simulation",
+    //         "type":"1","name": "Simulation",
     //         "size": 9983
     //     }, {
-    //         "name": "Spring",
+    //         "type":"1","name": "Spring",
     //         "size": 2213
     //     }, {
-    //         "name": "SpringForce",
+    //         "type":"1","name": "SpringForce",
     //         "size": 1681
     //     }]
     // }, {
-    //     "name": "query",
+    //     "type":"1","name": "query",
     //     "children": [{
-    //         "name": "AggregateExpression",
+    //         "type":"1","name": "AggregateExpression",
     //         "size": 1616
     //     }, {
-    //         "name": "And",
+    //         "type":"1","name": "And",
     //         "size": 1027
     //     }, {
-    //         "name": "Arithmetic",
+    //         "type":"1","name": "Arithmetic",
     //         "size": 3891
     //     }, {
-    //         "name": "Average",
+    //         "type":"1","name": "Average",
     //         "size": 891
     //     }, {
-    //         "name": "BinaryExpression",
+    //         "type":"1","name": "BinaryExpression",
     //         "size": 2893
     //     }, {
-    //         "name": "Comparison",
+    //         "type":"1","name": "Comparison",
     //         "size": 5103
     //     }, {
-    //         "name": "CompositeExpression",
+    //         "type":"1","name": "CompositeExpression",
     //         "size": 3677
     //     }, {
-    //         "name": "Count",
+    //         "type":"1","name": "Count",
     //         "size": 781
     //     }, {
-    //         "name": "DateUtil",
+    //         "type":"1","name": "DateUtil",
     //         "size": 4141
     //     }, {
-    //         "name": "Distinct",
+    //         "type":"1","name": "Distinct",
     //         "size": 933
     //     }, {
-    //         "name": "Expression",
+    //         "type":"1","name": "Expression",
     //         "size": 5130
     //     }, {
-    //         "name": "ExpressionIterator",
+    //         "type":"1","name": "ExpressionIterator",
     //         "size": 3617
     //     }, {
-    //         "name": "Fn",
+    //         "type":"1","name": "Fn",
     //         "size": 3240
     //     }, {
-    //         "name": "If",
+    //         "type":"1","name": "If",
     //         "size": 2732
     //     }, {
-    //         "name": "IsA",
+    //         "type":"1","name": "IsA",
     //         "size": 2039
     //     }, {
-    //         "name": "Literal",
+    //         "type":"1","name": "Literal",
     //         "size": 1214
     //     }, {
-    //         "name": "Match",
+    //         "type":"1","name": "Match",
     //         "size": 3748
     //     }, {
-    //         "name": "Maximum",
+    //         "type":"1","name": "Maximum",
     //         "size": 843
     //     }, {
-    //         "name": "methods",
+    //         "type":"1","name": "methods",
     //         "children": [{
-    //             "name": "add",
+    //             "type":"1","name": "add",
     //             "size": 593
     //         }, {
-    //             "name": "and",
+    //             "type":"1","name": "and",
     //             "size": 330
     //         }, {
-    //             "name": "average",
+    //             "type":"1","name": "average",
     //             "size": 287
     //         }, {
-    //             "name": "count",
+    //             "type":"1","name": "count",
     //             "size": 277
     //         }, {
-    //             "name": "distinct",
+    //             "type":"1","name": "distinct",
     //             "size": 292
     //         }, {
-    //             "name": "div",
+    //             "type":"1","name": "div",
     //             "size": 595
     //         }, {
-    //             "name": "eq",
+    //             "type":"1","name": "eq",
     //             "size": 594
     //         }, {
-    //             "name": "fn",
+    //             "type":"1","name": "fn",
     //             "size": 460
     //         }, {
-    //             "name": "gt",
+    //             "type":"1","name": "gt",
     //             "size": 603
     //         }, {
-    //             "name": "gte",
+    //             "type":"1","name": "gte",
     //             "size": 625
     //         }, {
-    //             "name": "iff",
+    //             "type":"1","name": "iff",
     //             "size": 748
     //         }, {
-    //             "name": "isa",
+    //             "type":"1","name": "isa",
     //             "size": 461
     //         }, {
-    //             "name": "lt",
+    //             "type":"1","name": "lt",
     //             "size": 597
     //         }, {
-    //             "name": "lte",
+    //             "type":"1","name": "lte",
     //             "size": 619
     //         }, {
-    //             "name": "max",
+    //             "type":"1","name": "max",
     //             "size": 283
     //         }, {
-    //             "name": "min",
+    //             "type":"1","name": "min",
     //             "size": 283
     //         }, {
-    //             "name": "mod",
+    //             "type":"1","name": "mod",
     //             "size": 591
     //         }, {
-    //             "name": "mul",
+    //             "type":"1","name": "mul",
     //             "size": 603
     //         }, {
-    //             "name": "neq",
+    //             "type":"1","name": "neq",
     //             "size": 599
     //         }, {
-    //             "name": "not",
+    //             "type":"1","name": "not",
     //             "size": 386
     //         }, {
-    //             "name": "or",
+    //             "type":"1","name": "or",
     //             "size": 323
     //         }, {
-    //             "name": "orderby",
+    //             "type":"1","name": "orderby",
     //             "size": 307
     //         }, {
-    //             "name": "range",
+    //             "type":"1","name": "range",
     //             "size": 772
     //         }, {
-    //             "name": "select",
+    //             "type":"1","name": "select",
     //             "size": 296
     //         }, {
-    //             "name": "stddev",
+    //             "type":"1","name": "stddev",
     //             "size": 363
     //         }, {
-    //             "name": "sub",
+    //             "type":"1","name": "sub",
     //             "size": 600
     //         }, {
-    //             "name": "sum",
+    //             "type":"1","name": "sum",
     //             "size": 280
     //         }, {
-    //             "name": "update",
+    //             "type":"1","name": "update",
     //             "size": 307
     //         }, {
-    //             "name": "variance",
+    //             "type":"1","name": "variance",
     //             "size": 335
     //         }, {
-    //             "name": "where",
+    //             "type":"1","name": "where",
     //             "size": 299
     //         }, {
-    //             "name": "xor",
+    //             "type":"1","name": "xor",
     //             "size": 354
     //         }, {
-    //             "name": "_",
+    //             "type":"1","name": "_",
     //             "size": 264
     //         }]
     //     }, {
-    //         "name": "Minimum",
+    //         "type":"1","name": "Minimum",
     //         "size": 843
     //     }, {
-    //         "name": "Not",
+    //         "type":"1","name": "Not",
     //         "size": 1554
     //     }, {
-    //         "name": "Or",
+    //         "type":"1","name": "Or",
     //         "size": 970
     //     }, {
-    //         "name": "Query",
+    //         "type":"1","name": "Query",
     //         "size": 13896
     //     }, {
-    //         "name": "Range",
+    //         "type":"1","name": "Range",
     //         "size": 1594
     //     }, {
-    //         "name": "StringUtil",
+    //         "type":"1","name": "StringUtil",
     //         "size": 4130
     //     }, {
-    //         "name": "Sum",
+    //         "type":"1","name": "Sum",
     //         "size": 791
     //     }, {
-    //         "name": "Variable",
+    //         "type":"1","name": "Variable",
     //         "size": 1124
     //     }, {
-    //         "name": "Variance",
+    //         "type":"1","name": "Variance",
     //         "size": 1876
     //     }, {
-    //         "name": "Xor",
+    //         "type":"1","name": "Xor",
     //         "size": 1101
     //     }]
     // }, {
-    //     "name": "scale",
+    //     "type":"1","name": "scale",
     //     "children": [{
-    //         "name": "IScaleMap",
+    //         "type":"1","name": "IScaleMap",
     //         "size": 2105
     //     }, {
-    //         "name": "LinearScale",
+    //         "type":"1","name": "LinearScale",
     //         "size": 1316
     //     }, {
-    //         "name": "LogScale",
+    //         "type":"1","name": "LogScale",
     //         "size": 3151
     //     }, {
-    //         "name": "OrdinalScale",
+    //         "type":"1","name": "OrdinalScale",
     //         "size": 3770
     //     }, {
-    //         "name": "QuantileScale",
+    //         "type":"1","name": "QuantileScale",
     //         "size": 2435
     //     }, {
-    //         "name": "QuantitativeScale",
+    //         "type":"1","name": "QuantitativeScale",
     //         "size": 4839
     //     }, {
-    //         "name": "RootScale",
+    //         "type":"1","name": "RootScale",
     //         "size": 1756
     //     }, {
-    //         "name": "Scale",
+    //         "type":"1","name": "Scale",
     //         "size": 4268
     //     }, {
-    //         "name": "ScaleType",
+    //         "type":"1","name": "ScaleType",
     //         "size": 1821
     //     }, {
-    //         "name": "TimeScale",
+    //         "type":"1","name": "TimeScale",
     //         "size": 5833
     //     }]
     // }, {
-    //     "name": "util",
+    //     "type":"1","name": "util",
     //     "children": [{
-    //         "name": "Arrays",
+    //         "type":"1","name": "Arrays",
     //         "size": 8258
     //     }, {
-    //         "name": "Colors",
+    //         "type":"1","name": "Colors",
     //         "size": 10001
     //     }, {
-    //         "name": "Dates",
+    //         "type":"1","name": "Dates",
     //         "size": 8217
     //     }, {
-    //         "name": "Displays",
+    //         "type":"1","name": "Displays",
     //         "size": 12555
     //     }, {
-    //         "name": "Filter",
+    //         "type":"1","name": "Filter",
     //         "size": 2324
     //     }, {
-    //         "name": "Geometry",
+    //         "type":"1","name": "Geometry",
     //         "size": 10993
     //     }, {
-    //         "name": "heap",
+    //         "type":"1","name": "heap",
     //         "children": [{
-    //             "name": "FibonacciHeap",
+    //             "type":"1","name": "FibonacciHeap",
     //             "size": 9354
     //         }, {
-    //             "name": "HeapNode",
+    //             "type":"1","name": "HeapNode",
     //             "size": 1233
     //         }]
     //     }, {
-    //         "name": "IEvaluable",
+    //         "type":"1","name": "IEvaluable",
     //         "size": 335
     //     }, {
-    //         "name": "IPredicate",
+    //         "type":"1","name": "IPredicate",
     //         "size": 383
     //     }, {
-    //         "name": "IValueProxy",
+    //         "type":"1","name": "IValueProxy",
     //         "size": 874
     //     }, {
-    //         "name": "math",
+    //         "type":"1","name": "math",
     //         "children": [{
-    //             "name": "DenseMatrix",
+    //             "type":"1","name": "DenseMatrix",
     //             "size": 3165
     //         }, {
-    //             "name": "IMatrix",
+    //             "type":"1","name": "IMatrix",
     //             "size": 2815
     //         }, {
-    //             "name": "SparseMatrix",
+    //             "type":"1","name": "SparseMatrix",
     //             "size": 3366
     //         }]
     //     }, {
-    //         "name": "Maths",
+    //         "type":"1","name": "Maths",
     //         "size": 17705
     //     }, {
-    //         "name": "Orientation",
+    //         "type":"1","name": "Orientation",
     //         "size": 1486
     //     }, {
-    //         "name": "palette",
+    //         "type":"1","name": "palette",
     //         "children": [{
-    //             "name": "ColorPalette",
+    //             "type":"1","name": "ColorPalette",
     //             "size": 6367
     //         }, {
-    //             "name": "Palette",
+    //             "type":"1","name": "Palette",
     //             "size": 1229
     //         }, {
-    //             "name": "ShapePalette",
+    //             "type":"1","name": "ShapePalette",
     //             "size": 2059
     //         }, {
-    //             "name": "SizePalette",
+    //             "type":"1","name": "SizePalette",
     //             "size": 2291
     //         }]
     //     }, {
-    //         "name": "Property",
+    //         "type":"1","name": "Property",
     //         "size": 5559
     //     }, {
-    //         "name": "Shapes",
+    //         "type":"1","name": "Shapes",
     //         "size": 19118
     //     }, {
-    //         "name": "Sort",
+    //         "type":"1","name": "Sort",
     //         "size": 6887
     //     }, {
-    //         "name": "Stats",
+    //         "type":"1","name": "Stats",
     //         "size": 6557
     //     }, {
-    //         "name": "Strings",
+    //         "type":"1","name": "Strings",
     //         "size": 22026
     //     }]
     // }, {
-    //     "name": "vis",
+    //     "type":"1","name": "vis",
     //     "children": [{
-    //         "name": "axis",
+    //         "type":"1","name": "axis",
     //         "children": [{
-    //             "name": "Axes",
+    //             "type":"1","name": "Axes",
     //             "size": 1302
     //         }, {
-    //             "name": "Axis",
+    //             "type":"1","name": "Axis",
     //             "size": 24593
     //         }, {
-    //             "name": "AxisGridLine",
+    //             "type":"1","name": "AxisGridLine",
     //             "size": 652
     //         }, {
-    //             "name": "AxisLabel",
+    //             "type":"1","name": "AxisLabel",
     //             "size": 636
     //         }, {
-    //             "name": "CartesianAxes",
+    //             "type":"1","name": "CartesianAxes",
     //             "size": 6703
     //         }]
     //     }, {
-    //         "name": "controls",
+    //         "type":"1","name": "controls",
     //         "children": [{
-    //             "name": "AnchorControl",
+    //             "type":"1","name": "AnchorControl",
     //             "size": 2138
     //         }, {
-    //             "name": "ClickControl",
+    //             "type":"1","name": "ClickControl",
     //             "size": 3824
     //         }, {
-    //             "name": "Control",
+    //             "type":"1","name": "Control",
     //             "size": 1353
     //         }, {
-    //             "name": "ControlList",
+    //             "type":"1","name": "ControlList",
     //             "size": 4665
     //         }, {
-    //             "name": "DragControl",
+    //             "type":"1","name": "DragControl",
     //             "size": 2649
     //         }, {
-    //             "name": "ExpandControl",
+    //             "type":"1","name": "ExpandControl",
     //             "size": 2832
     //         }, {
-    //             "name": "HoverControl",
+    //             "type":"1","name": "HoverControl",
     //             "size": 4896
     //         }, {
-    //             "name": "IControl",
+    //             "type":"1","name": "IControl",
     //             "size": 763
     //         }, {
-    //             "name": "PanZoomControl",
+    //             "type":"1","name": "PanZoomControl",
     //             "size": 5222
     //         }, {
-    //             "name": "SelectionControl",
+    //             "type":"1","name": "SelectionControl",
     //             "size": 7862
     //         }, {
-    //             "name": "TooltipControl",
+    //             "type":"1","name": "TooltipControl",
     //             "size": 8435
     //         }]
     //     }, {
-    //         "name": "data",
+    //         "type":"1","name": "data",
     //         "children": [{
-    //             "name": "Data",
+    //             "type":"1","name": "Data",
     //             "size": 20544
     //         }, {
-    //             "name": "DataList",
+    //             "type":"1","name": "DataList",
     //             "size": 19788
     //         }, {
-    //             "name": "DataSprite",
+    //             "type":"1","name": "DataSprite",
     //             "size": 10349
     //         }, {
-    //             "name": "EdgeSprite",
+    //             "type":"1","name": "EdgeSprite",
     //             "size": 3301
     //         }, {
-    //             "name": "NodeSprite",
+    //             "type":"1","name": "NodeSprite",
     //             "size": 19382
     //         }, {
-    //             "name": "render",
+    //             "type":"1","name": "render",
     //             "children": [{
-    //                 "name": "ArrowType",
+    //                 "type":"1","name": "ArrowType",
     //                 "size": 698
     //             }, {
-    //                 "name": "EdgeRenderer",
+    //                 "type":"1","name": "EdgeRenderer",
     //                 "size": 5569
     //             }, {
-    //                 "name": "IRenderer",
+    //                 "type":"1","name": "IRenderer",
     //                 "size": 353
     //             }, {
-    //                 "name": "ShapeRenderer",
+    //                 "type":"1","name": "ShapeRenderer",
     //                 "size": 2247
     //             }]
     //         }, {
-    //             "name": "ScaleBinding",
+    //             "type":"1","name": "ScaleBinding",
     //             "size": 11275
     //         }, {
-    //             "name": "Tree",
+    //             "type":"1","name": "Tree",
     //             "size": 7147
     //         }, {
-    //             "name": "TreeBuilder",
+    //             "type":"1","name": "TreeBuilder",
     //             "size": 9930
     //         }]
     //     }, {
-    //         "name": "events",
+    //         "type":"1","name": "events",
     //         "children": [{
-    //             "name": "DataEvent",
+    //             "type":"1","name": "DataEvent",
     //             "size": 2313
     //         }, {
-    //             "name": "SelectionEvent",
+    //             "type":"1","name": "SelectionEvent",
     //             "size": 1880
     //         }, {
-    //             "name": "TooltipEvent",
+    //             "type":"1","name": "TooltipEvent",
     //             "size": 1701
     //         }, {
-    //             "name": "VisualizationEvent",
+    //             "type":"1","name": "VisualizationEvent",
     //             "size": 1117
     //         }]
     //     }, {
-    //         "name": "legend",
+    //         "type":"1","name": "legend",
     //         "children": [{
-    //             "name": "Legend",
+    //             "type":"1","name": "Legend",
     //             "size": 20859
     //         }, {
-    //             "name": "LegendItem",
+    //             "type":"1","name": "LegendItem",
     //             "size": 4614
     //         }, {
-    //             "name": "LegendRange",
+    //             "type":"1","name": "LegendRange",
     //             "size": 10530
     //         }]
     //     }, {
-    //         "name": "operator",
+    //         "type":"1","name": "operator",
     //         "children": [{
-    //             "name": "distortion",
+    //             "type":"1","name": "distortion",
     //             "children": [{
-    //                 "name": "BifocalDistortion",
+    //                 "type":"1","name": "BifocalDistortion",
     //                 "size": 4461
     //             }, {
-    //                 "name": "Distortion",
+    //                 "type":"1","name": "Distortion",
     //                 "size": 6314
     //             }, {
-    //                 "name": "FisheyeDistortion",
+    //                 "type":"1","name": "FisheyeDistortion",
     //                 "size": 3444
     //             }]
     //         }, {
-    //             "name": "encoder",
+    //             "type":"1","name": "encoder",
     //             "children": [{
-    //                 "name": "ColorEncoder",
+    //                 "type":"1","name": "ColorEncoder",
     //                 "size": 3179
     //             }, {
-    //                 "name": "Encoder",
+    //                 "type":"1","name": "Encoder",
     //                 "size": 4060
     //             }, {
-    //                 "name": "PropertyEncoder",
+    //                 "type":"1","name": "PropertyEncoder",
     //                 "size": 4138
     //             }, {
-    //                 "name": "ShapeEncoder",
+    //                 "type":"1","name": "ShapeEncoder",
     //                 "size": 1690
     //             }, {
-    //                 "name": "SizeEncoder",
+    //                 "type":"1","name": "SizeEncoder",
     //                 "size": 1830
     //             }]
     //         }, {
-    //             "name": "filter",
+    //             "type":"1","name": "filter",
     //             "children": [{
-    //                 "name": "FisheyeTreeFilter",
+    //                 "type":"1","name": "FisheyeTreeFilter",
     //                 "size": 5219
     //             }, {
-    //                 "name": "GraphDistanceFilter",
+    //                 "type":"1","name": "GraphDistanceFilter",
     //                 "size": 3165
     //             }, {
-    //                 "name": "VisibilityFilter",
+    //                 "type":"1","name": "VisibilityFilter",
     //                 "size": 3509
     //             }]
     //         }, {
-    //             "name": "IOperator",
+    //             "type":"1","name": "IOperator",
     //             "size": 1286
     //         }, {
-    //             "name": "label",
+    //             "type":"1","name": "label",
     //             "children": [{
-    //                 "name": "Labeler",
+    //                 "type":"1","name": "Labeler",
     //                 "size": 9956
     //             }, {
-    //                 "name": "RadialLabeler",
+    //                 "type":"1","name": "RadialLabeler",
     //                 "size": 3899
     //             }, {
-    //                 "name": "StackedAreaLabeler",
+    //                 "type":"1","name": "StackedAreaLabeler",
     //                 "size": 3202
     //             }]
     //         }, {
-    //             "name": "layout",
+    //             "type":"1","name": "layout",
     //             "children": [{
-    //                 "name": "AxisLayout",
+    //                 "type":"1","name": "AxisLayout",
     //                 "size": 6725
     //             }, {
-    //                 "name": "BundledEdgeRouter",
+    //                 "type":"1","name": "BundledEdgeRouter",
     //                 "size": 3727
     //             }, {
-    //                 "name": "CircleLayout",
+    //                 "type":"1","name": "CircleLayout",
     //                 "size": 9317
     //             }, {
-    //                 "name": "CirclePackingLayout",
+    //                 "type":"1","name": "CirclePackingLayout",
     //                 "size": 12003
     //             }, {
-    //                 "name": "DendrogramLayout",
+    //                 "type":"1","name": "DendrogramLayout",
     //                 "size": 4853
     //             }, {
-    //                 "name": "ForceDirectedLayout",
+    //                 "type":"1","name": "ForceDirectedLayout",
     //                 "size": 8411
     //             }, {
-    //                 "name": "IcicleTreeLayout",
+    //                 "type":"1","name": "IcicleTreeLayout",
     //                 "size": 4864
     //             }, {
-    //                 "name": "IndentedTreeLayout",
+    //                 "type":"1","name": "IndentedTreeLayout",
     //                 "size": 3174
     //             }, {
-    //                 "name": "Layout",
+    //                 "type":"1","name": "Layout",
     //                 "size": 7881
     //             }, {
-    //                 "name": "NodeLinkTreeLayout",
+    //                 "type":"1","name": "NodeLinkTreeLayout",
     //                 "size": 12870
     //             }, {
-    //                 "name": "PieLayout",
+    //                 "type":"1","name": "PieLayout",
     //                 "size": 2728
     //             }, {
-    //                 "name": "RadialTreeLayout",
+    //                 "type":"1","name": "RadialTreeLayout",
     //                 "size": 12348
     //             }, {
-    //                 "name": "RandomLayout",
+    //                 "type":"1","name": "RandomLayout",
     //                 "size": 870
     //             }, {
-    //                 "name": "StackedAreaLayout",
+    //                 "type":"1","name": "StackedAreaLayout",
     //                 "size": 9121
     //             }, {
-    //                 "name": "TreeMapLayout",
+    //                 "type":"1","name": "TreeMapLayout",
     //                 "size": 9191
     //             }]
     //         }, {
-    //             "name": "Operator",
+    //             "type":"1","name": "Operator",
     //             "size": 2490
     //         }, {
-    //             "name": "OperatorList",
+    //             "type":"1","name": "OperatorList",
     //             "size": 5248
     //         }, {
-    //             "name": "OperatorSequence",
+    //             "type":"1","name": "OperatorSequence",
     //             "size": 4190
     //         }, {
-    //             "name": "OperatorSwitch",
+    //             "type":"1","name": "OperatorSwitch",
     //             "size": 2581
     //         }, {
-    //             "name": "SortOperator",
+    //             "type":"1","name": "SortOperator",
     //             "size": 2023
     //         }]
     //     }, {
-    //         "name": "Visualization",
+    //         "type":"1","name": "Visualization",
     //         "size": 16540
     //     }]
     // }]
